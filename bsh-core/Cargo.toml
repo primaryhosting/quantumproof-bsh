@@ -1,0 +1,18 @@
+[package]
+name = "bsh-core"
+version = "0.1.0"
+edition = "2021"
+authors = ["Christopher Brock <chrisbrock54@gmail.com>"]
+description = "Brockian Secure Hash (BSH) — Post-quantum hash function using D5 pentagonal symmetry and golden ratio constants"
+license = "Apache-2.0"
+keywords = ["cryptography", "hash", "post-quantum", "brockian", "d5-symmetry"]
+
+[dependencies]
+hex = "0.4"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[bench]]
+name = "bsh_bench"
+harness = false
