@@ -51,6 +51,13 @@ dependencies = [
 ]
 
 [[package]]
+name = "qp-cli"
+version = "0.1.0"
+dependencies = [
+ "bsh-core",
+]
+
+[[package]]
 name = "quote"
 version = "1.0.45"
 source = "registry+https://github.com/rust-lang/crates.io-index"

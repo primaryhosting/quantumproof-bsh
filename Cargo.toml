@@ -1,5 +1,5 @@
 [workspace]
-members = ["bsh-core", "bsh-wasm"]
+members = ["bsh-core", "bsh-wasm", "qp-cli"]
 resolver = "2"
 
 [profile.release]

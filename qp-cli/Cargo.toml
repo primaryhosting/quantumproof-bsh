@@ -1,0 +1,14 @@
+[package]
+name = "qp-cli"
+version = "0.1.0"
+edition = "2021"
+authors = ["Christopher Brock <chrisbrock54@gmail.com>"]
+description = "QuantumProof CLI — hash, keygen, scan commands"
+license = "Apache-2.0"
+
+[[bin]]
+name = "qp"
+path = "src/main.rs"
+
+[dependencies]
+bsh-core = { path = "../bsh-core" }
