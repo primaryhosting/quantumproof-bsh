@@ -10,9 +10,3 @@ keywords = ["cryptography", "hash", "post-quantum", "brockian", "d5-symmetry"]
 [dependencies]
 hex = "0.4"
 
-[dev-dependencies]
-criterion = { version = "0.5", features = ["html_reports"] }
-
-[[bench]]
-name = "bsh_bench"
-harness = false

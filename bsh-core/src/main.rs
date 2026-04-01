@@ -21,23 +21,23 @@ fn main() {
     }
 
     match args[1].as_str() {
-        "--test" => bsh::run_tests(),
-        "--bench" => bsh::run_bench(),
+        "--test" => bsh_core::run_tests(),
+        "--bench" => bsh_core::run_bench(),
         "-f" => {
             if args.len() < 3 {
                 eprintln!("Error: -f requires a filename");
                 std::process::exit(1);
             }
             match fs::read(&args[2]) {
-                Ok(data) => println!("{}  {}", bsh::hash_hex(&data), args[2]),
+                Ok(data) => println!("{}  {}", bsh_core::hash_hex(&data), args[2]),
                 Err(e) => { eprintln!("Error: {}", e); std::process::exit(1); }
             }
         }
         "-" => {
             let mut buf = Vec::new();
             io::stdin().read_to_end(&mut buf).unwrap();
-            println!("{}  -", bsh::hash_hex(&buf));
+            println!("{}  -", bsh_core::hash_hex(&buf));
         }
-        _ => println!("{}  \"{}\"", bsh::hash_hex(args[1].as_bytes()), args[1]),
+        _ => println!("{}  \"{}\"", bsh_core::hash_hex(args[1].as_bytes()), args[1]),
     }
 }
